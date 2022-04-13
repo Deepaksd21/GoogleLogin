@@ -15,9 +15,12 @@ const usersRoute = require("./auth/routes/userRoutes");
 const hospitalRoutes = require("./hospital/routes/hospital");
 const doctorRouter = require("./pharmcay/routes/doctorRouter");
 //Db
-mongoose.connect("mongodb://localhost:27017/curaster", {
-  useNewUrlParser: "true",
-});
+mongoose.connect(
+  "mongodb+srv://userProfiles:MoBohTt3PGtlsyCy@cluster0.nx0ry.mongodb.net/eHospiDatabase?retryWrites=true&w=majority",
+  {
+    useNewUrlParser: "true",
+  }
+);
 mongoose.connection.on("error", (err) => {
   console.log("err", err);
 });
